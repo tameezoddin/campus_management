@@ -40,7 +40,12 @@ app.use('/api/schedule', scheduleRoutes);
 app.use('/api/attendance', attendanceRoutes); 
 app.use('/api/upload', uploadRoute);// <--- ADD THIS LINE
 
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server is running on http://localhost:${PORT}`);
 });
+
